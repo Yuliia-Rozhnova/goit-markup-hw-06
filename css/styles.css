@@ -644,6 +644,10 @@ ul {
   box-sizing: border-box;
   border-radius: 50%;
 }
+
+.btn:focus {
+  fill: var(--accent-color);
+}
 .modal-title {
   font-weight: 700;
   font-size: 20px;
@@ -652,9 +656,10 @@ ul {
   letter-spacing: 0.03em;
 
   color: var(--text-color);
+  margin-bottom: 12px;
 }
 .input-label {
-  display: block;
+  display: flex;
 
   font-size: 12px;
   line-height: 1.17;
@@ -671,9 +676,27 @@ ul {
   border-radius: 4px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+.modal-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-input:focus + .input-icon {
+  fill: var(--accent-color);
+}
+
+.input-form {
+  display: block;
+  position: relative;
 }
 
 .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .modal-text {
@@ -687,10 +710,19 @@ ul {
   height: 120px;
   padding: 12px 16px;
   resize: none;
+  margin-bottom: 20px;
 }
 .checkbox-text {
+  position: relative;
+
   line-height: 1.71;
+  align-items: center;
 }
+/* 
+.modal-checkbox {
+  margin-bottom: 30px;
+} */
+
 .checkbox-text span {
   display: flex;
   justify-content: center;
@@ -698,31 +730,26 @@ ul {
 
   width: 16px;
   height: 15px;
-  border-radius: 2px;
-  background-color: var(--text-color);
-  margin-right: 7px;
+  border-radius: 2px solid #212121;
+  fill: var(--basic-bg-color);
+  margin-right: 9px;
 }
+
 .modal-checkbox:checked + .checkbox-text span {
   background-color: var(--accent-color);
   border: none;
 }
 
-.button-modal {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
+.button-modal:hover,
+.button-modal:focus {
+  background-color: #188ce8;
 }
 
-.footer-form {
+.form-set {
   display: flex;
+  width: 570px;
 }
-
 .form-subscription {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   width: 358px;
   min-height: 50px;
   margin-right: 12px;
@@ -739,6 +766,9 @@ ul {
 }
 
 .button-form {
+  display: flex;
+  margin: 0 auto;
+
   width: 200px;
   min-height: 50px;
   font-weight: 700;

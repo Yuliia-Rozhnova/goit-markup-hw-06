@@ -370,7 +370,6 @@
             </ul>
             </div>
         </div>
-        </div>
         <form class="footer-form">
             <h3 class="footer-title">Подпишитесь на рассылку</h3>
             <div class="form-set">
@@ -381,6 +380,7 @@
                 </svg> </button>
                 </div>
         </form>
+        </div>
     </footer>
 
  <div class="backdrop is-hidden" data-modal>
@@ -390,44 +390,48 @@
     <use href="./images/icons.svg#icon-close-black"></use>
 </svg>
  </button>
- </div>
-</div>
+
 <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-<form action="#"  class="modal-form">
+<form action="#" class="modal-form">
+    <div class="input-form">
     <label for="user-name" class="input-label">Имя</label>
     <input type="text" name="user-name" id="user-name" class="modal-input"/>
 <svg class="input-icon" width="12" height="12">
     <use href="./images/icons.svg#icon-user"></use>
 </svg>
-
+</div>
+    <div class="input-form">
     <label for="user-tel" class="input-label">Телефон</label>
     <input type="tel" name="user-tel" id="user-tel" class="modal-input" />
     <svg class="input-icon" width="13" height="13">
         <use href="./images/icons.svg#icon-tel"></use>
     </svg>
+    </div>
 
+    <div class="input-form">
     <label for="user-email" class="input-label">Почта</label>
     <input type="email" name="user-email" id="user-email" class="modal-input" /> 
     <svg class="input-icon" width="15" height="12">
         <use href="./images/icons.svg#icon-email"></use>
     </svg>
+    </div>
 
+    <div class="input-form">
     <label for="user-text" class="input-label">Комментарий</label>
     <textarea name="user-text" id="user-text" class="modal-text modal-input" placeholder="Введите текст"></textarea>
+    </div>
 
-    <input type="checkbox" id="modal-checkbox" class="modal-checkbox"/>
+    <input type="checkbox" id="modal-checkbox" class="modal-checkbox visually-hidden"/>
     <label for="modal-checkbox" class="checkbox-text">
         <span>
             <svg class="chek-icon" width="11" height="8">
                 <use href="./images/icons.svg#icon-checkbox"></use></svg>
-        </span>Соглашаюсь с рассылкой и принимаю<a href="">словия договора</a></label>
+        </span>Соглашаюсь с рассылкой и принимаю<a href=""> Условия договора</a></label>
 
-    <button type="submit" class="button-modal button">Отправить</button>
-    
-
-
-
+    <button type="submit" class="button-form button button-modal">Отправить</button>
 </form>
+</div>
+</div>
 <script src="./js/modal.js"></script>
 </body>
 </html>
