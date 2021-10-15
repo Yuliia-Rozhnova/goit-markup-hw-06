@@ -747,6 +747,9 @@ ul {
   border: none;
 }
 
+.modal-link {
+  color: var(--accent-color);
+}
 .button-modal {
   margin: 0 auto;
   transition-property: background-color;
